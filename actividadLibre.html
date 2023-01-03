@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head> </head>
+  <body>
+    <script src="js/actividadLibreJS.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="css/actividadLibreCSS.css" />
+    <h1>FUNCIONALIDADES CON JAVASCRIPT</h1>
+    <div id="retorno">
+      <input type="button" value="VOLVER AL INDICE" onclick="location.href='index.html'" />
+      <input type="button" value="VER ACTIVIDAD KARTS" onclick="location.href='karts.html'" />
+      <input type="button" value="ACCEDE AL CODIGO JAVASCRIPT DE LA ACTIVIDAD" onclick="location.href='js/actividadLibreJS.js'" />
+    </div>
+    <div>
+      <h2>Convertir texto en mayúsculas, minúsculas</h2>
+      <h4>Introduzca una palabra y alterne mayúsculas y minúsculas</h4>
+      <form name="formulario" method="post">
+        <input name="valorEntrada" type="text" value="" size="30" />
+        <input
+          type="button"
+          name="Convert"
+          value="Minúsculas"
+          onClick="convertirMinusculas();"
+        />
+        <input
+          type="button"
+          name="Convert"
+          value="Mayúsculas"
+          onClick="convertirMayusculas();"
+        />
+        <input name="valorSalida" type="text" value="" size="30" />
+      </form>
+    </div>
+
+    <div>
+      <h2>Crear elementos HTML con Javascript</h2>
+      <h4 id="crearParrafo">Click en el botón para crear un párrafo nuevo</h4>
+      <input
+        type="button"
+        name="crear"
+        value="Crear un párrafo"
+        onclick="crearParrafo()"
+      />
+    </div>
+
+    <div>
+      <h2>
+        Muestra los valores de la pantalla activa del usuario en el documento
+        HTML
+      </h2>
+      <h4 id="crearParrafo">Click en el botón para ver valores</h4>
+       <input
+        type="button"
+        name="crear"
+        value="Ver valores"
+        onclick="verValoresScreen()"
+      />
+      <table>
+        <tr>
+          <th class="encabezados">Propiedad</th>
+          <th class="encabezados">Valor</th>
+        </tr>
+        <tr>
+          <th class="first">Altura (en px)</th>
+          <td id="altura"></td>
+        </tr>
+        <tr>
+          <th>Anchura (en px)</th>
+          <td id="anchura"></td>
+        </tr>
+        <tr>
+          <th>Color (tipo)</th>
+          <td id="color"></td>
+        </tr>
+      </table>
+     
+    </div>
+    <div>
+        <h2>
+        Abriendo y cerrando ventanas con Javascript
+      </h2>
+      <h4 id="crearParrafo">Click en el botón para crear una nueva ventana</h4>
+       <input
+        type="button"
+        name="crear"
+        value="Nueva ventana"
+        onclick="nuevaVentana()"
+      />
+    </div>
+  </body>
+</html>

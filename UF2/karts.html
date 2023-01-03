@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KARTS</title>
+    <script src="js/kartsJS.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/kartsCSS.css">
+  </head>
+  <body>
+    <div class="cabecera">
+      <h1>CLASIFICACION PILOTOS KARTS</h1>
+      <div id="retorno">
+        <input type="button" value="VOLVER AL INDICE" onclick="location.href='index.html'">
+        <input type="button" value="VER ACTIVIDAD LIBRE" onclick="location.href='actividadLibre.html'">
+        <input type="button" value="ACCEDE AL CODIGO JAVASCRIPT DE LA ACTIVIDAD" onclick="location.href='js/kartsJS.js'" />
+      
+    </div>
+      <p>Tenemos los siguientes pilotos participantes</p>
+    </div>
+    <!--Creamos la tabla de pilotos-->
+    <div class="table">
+      <table>
+        <thead>
+          <tr>
+            <th colspan="2">PARTICIPANTES</th>
+          </tr>
+        </thead>
+        <tr>
+          <th>Piloto</th>
+          <th>Nº de Kart</th>
+        </tr>
+        <tr>
+          <td>Lewis Hamilton</td>
+          <td id="1">1</td>
+        </tr>
+        <tr>
+          <td>Jules Bianchi</td>
+          <td id="2">2</td>
+        </tr>
+        <tr>
+          <td>Sebestian Vettel</td>
+          <td id="3">3</td>
+        </tr>
+        <tr>
+          <td>Michael Schumacher</td>
+          <td id="4">4</td>
+        </tr>
+        <tr>
+          <td>Kimi Raikkonen</td>
+          <td id="5">5</td>
+        </tr>
+      </table>
+    </div>
+    <div class="main">
+      <!--Aqui se muestra la clasificacion de los pilotos sin ordenar-->
+      <p>Pulse para introducir el tiempo de cada corredor en formato [minutos.segundos]</p>
+      <input
+        onclick="tiempoPilotos()"
+        class=""
+        type="button"
+        value="Introducir tiempos"
+      />
+    </div>
+    <!--Aqui se muestra la clasificacion de los pilotos ordenada-->
+    <div id="resultsClasicacion">
+      <div id="resultados">
+        <p>RESULTADOS</p>
+      </div>
+      <div id="clasificacion">
+        <p>CLASIFICACION</p>
+      </div>
+    </div>
+  </body>
+</html>

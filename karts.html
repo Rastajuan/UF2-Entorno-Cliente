@@ -5,54 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KARTS</title>
-    <script src="kartsJS.js"></script>
-    <style type="text/css" rel="stylesheet">
-      body {
-        display: grid;
-        position: relative;
-        width: 80%;
-        /* background-color: aqua; */
-        margin: 0 auto;
-        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-      }
-      input{
-        margin-top: 5px;
-      }
-      table {
-        text-align: center;
-        border: 2px solid;
-        padding: 10px;
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      }
-      th {
-        border-bottom: 1px solid black;
-        padding-top: 5px;
-      }
-      thead {
-        align-self: center;
-      }
-      .cabecera {
-        text-align: center;
-      }
-      .main{
-        display: flex;
-        flex-direction: column;
-        width: 50%;
-        align-items: center;
-        margin: 0 auto;
-        margin-top: 20px;
-      }
-      .table {
-        justify-self: center;
-      }
-    </style>
+    <script src="js/kartsJS.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/kartsCSS.css">
   </head>
   <body>
     <div class="cabecera">
       <h1>CLASIFICACION PILOTOS KARTS</h1>
+      <div id="retorno">
+        <input type="button" value="VOLVER AL INDICE" onclick="location.href='index.html'">
+        <input type="button" value="VER ACTIVIDAD LIBRE" onclick="location.href='actividadLibre.html'">
+        <input type="button" value="ACCEDE AL CODIGO JAVASCRIPT DE LA ACTIVIDAD" onclick="location.href='js/kartsJS.js'" />
+      
+    </div>
       <p>Tenemos los siguientes pilotos participantes</p>
     </div>
-
+    <!--Creamos la tabla de pilotos-->
     <div class="table">
       <table>
         <thead>
@@ -87,19 +54,23 @@
       </table>
     </div>
     <div class="main">
-      <input onclick="" class="" type="button" value="Introduzca tiempo kart 1"/>
-      <input onclick="" class="" type="button" value="Introduzca tiempo kart 1"/>
-      <input onclick="" class="" type="button" value="Introduzca tiempo kart 1"/>
-      <input onclick="" class="" type="button" value="Introduzca tiempo kart 1"/>
-      <input onclick="" class="" type="button" value="Introduzca tiempo kart 1"/>
-
+      <!--Aqui se muestra la clasificacion de los pilotos sin ordenar-->
+      <p>Pulse para introducir el tiempo de cada corredor en formato [minutos.segundos]</p>
+      <input
+        onclick="tiempoPilotos()"
+        class=""
+        type="button"
+        value="Introducir tiempos"
+      />
     </div>
-
-    <script>
-      /* imprimirPilotos();
-      document.write(pilotos[1] + "<br>");
-      
-      document.write(pilotos.join("<br>")); */
-    </script>
+    <!--Aqui se muestra la clasificacion de los pilotos ordenada-->
+    <div id="resultsClasicacion">
+      <div id="resultados">
+        <p>RESULTADOS</p>
+      </div>
+      <div id="clasificacion">
+        <p>CLASIFICACION</p>
+      </div>
+    </div>
   </body>
 </html>

@@ -1,0 +1,14 @@
+h1, h2{
+    text-align: center;
+}
+
+#actividades{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin:30px;
+    
+}
+#actividad1, #actividad2{
+    width: 45%;
+}
